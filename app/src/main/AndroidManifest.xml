@@ -14,16 +14,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".activities.MainActivity">
+        <activity
+            android:name=".activity_phys"
+            android:exported="false" />
+        <activity
+            android:name=".activity_quiz"
+            android:exported="false" />
+        <activity
+            android:name=".mat_activity"
+            android:exported="false" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.RingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity android:name=".activities.RingActivity">
         </activity>
 
         <receiver android:name=".broadcastreceiver.AlarmBroadcastReceiver">

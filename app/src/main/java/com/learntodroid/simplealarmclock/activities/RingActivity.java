@@ -12,8 +12,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.learntodroid.simplealarmclock.R;
+import com.learntodroid.simplealarmclock.activity_phys;
+import com.learntodroid.simplealarmclock.activity_quiz;
 import com.learntodroid.simplealarmclock.createalarm.TimePickerUtil;
 import com.learntodroid.simplealarmclock.data.Alarm;
+import com.learntodroid.simplealarmclock.mat_activity;
 import com.learntodroid.simplealarmclock.service.AlarmService;
 
 import java.util.Calendar;
@@ -26,11 +29,38 @@ public class RingActivity extends AppCompatActivity {
     @BindView(R.id.activity_ring_dismiss) Button dismiss;
     @BindView(R.id.activity_ring_snooze) Button snooze;
     @BindView(R.id.activity_ring_clock) ImageView clock;
-
+    private Button button;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ring);
+
+
+        button = (Button) findViewById(R.id.math_btn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               openActivity2();
+            }
+        });
+
+        button = (Button) findViewById(R.id.quiz_btn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity3();
+            }
+        });
+
+        button = (Button) findViewById(R.id.phys_btn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity4();
+            }
+        });
+
+
 
         ButterKnife.bind(this);
 
@@ -76,6 +106,21 @@ public class RingActivity extends AppCompatActivity {
         });
 
         animateClock();
+    }
+
+    public void openActivity2() {
+        Intent intent = new Intent(this, mat_activity.class);
+        startActivity(intent);
+    }
+
+    public void openActivity3() {
+        Intent intent = new Intent(this, activity_quiz.class);
+        startActivity(intent);
+    }
+
+    public void openActivity4() {
+        Intent intent = new Intent(this, activity_phys.class);
+        startActivity(intent);
     }
 
     private void animateClock() {

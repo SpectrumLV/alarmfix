@@ -23,10 +23,11 @@
         android:layout_height="300dp"
         app:layout_constraintBottom_toTopOf="@+id/activity_ring_dismiss"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/ic_alarm_black_24dp"
-        />
+        app:layout_constraintVertical_bias="0.135"
+        app:srcCompat="@drawable/ic_alarm_black_24dp" />
 
     <Button
         android:id="@+id/activity_ring_dismiss"
@@ -45,5 +46,41 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/math_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do math"
+        app:layout_constraintBottom_toTopOf="@+id/activity_ring_dismiss"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_ring_clock"
+        app:layout_constraintVertical_bias="0.067" />
+
+    <Button
+        android:id="@+id/quiz_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do quiz"
+        app:layout_constraintBottom_toTopOf="@+id/phys_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/math_btn"
+        app:layout_constraintVertical_bias="0.475" />
+
+    <Button
+        android:id="@+id/phys_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do Physical activity"
+        app:layout_constraintBottom_toTopOf="@+id/activity_ring_dismiss"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_ring_clock"
+        app:layout_constraintVertical_bias="0.864" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
