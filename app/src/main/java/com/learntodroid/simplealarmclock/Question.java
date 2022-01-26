@@ -2,7 +2,7 @@ package com.learntodroid.simplealarmclock;
 
 import java.util.Random;
 
-public class math_question {
+public class Question {
     private int firstNumber;
     private int secondNumber;
     private int [] answerArray;
@@ -13,15 +13,18 @@ public class math_question {
 
     private String questionPhrase;
 
+
+
     //generate a random question
 
-    public void Question(int upperLimit){
+    public  Question(int upperLimit){
         this.upperLimit = upperLimit;
         Random randomNumberMaker = new Random();
 
         this.firstNumber = randomNumberMaker.nextInt(upperLimit);
         this.secondNumber = randomNumberMaker.nextInt(upperLimit);
         this.answer = this.firstNumber + this.secondNumber;
+        this.questionPhrase = firstNumber + " + " + secondNumber + " = ";
 
         this.answerPosition = randomNumberMaker.nextInt(4);
         this.answerArray = new int[] {0, 1, 2, 3};
