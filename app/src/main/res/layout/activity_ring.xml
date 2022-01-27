@@ -26,7 +26,6 @@
         android:layout_marginTop="40dp"
         android:background="#ffffff"
         android:text="Math"
-
         app:cornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
