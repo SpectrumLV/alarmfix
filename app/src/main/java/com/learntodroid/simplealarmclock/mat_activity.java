@@ -30,6 +30,14 @@ public class mat_activity extends AppCompatActivity {
             secondsRemaining--;
             tv_timer.setText(Integer.toString(secondsRemaining) + "sec");
             prog_timer.setProgress(30 - secondsRemaining);
+
+            if (g.getScore() == 40){
+                Intent intent = new Intent(mat_activity.this, ActivitySuccess.class);
+                startActivity(intent);
+                finish();
+                timer.cancel();
+            }
+
         }
 
         @Override
@@ -40,9 +48,13 @@ public class mat_activity extends AppCompatActivity {
             btn_answer3.setEnabled(false);
             tv_bottommessage.setText("Time is up" + g.getNumberCorrect() + "/" + (g.getTotalQuestions() - 1));
             btn_start.setVisibility(View.VISIBLE);
-            Intent intent = new Intent(mat_activity.this, FailedTask.class);
-            startActivity(intent);
-            finish();
+
+
+                Intent intent = new Intent(mat_activity.this, FailedTask.class);
+                startActivity(intent);
+                finish();
+
+
         }
     };
 
@@ -96,6 +108,9 @@ public class mat_activity extends AppCompatActivity {
                 g.checkAnswer(answerSelected);
                 tv_score.setText(Integer.toString(g.getScore()));
                 nextTurn();
+
+
+
             }
         };
 
