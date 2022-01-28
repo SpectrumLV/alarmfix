@@ -2,11 +2,16 @@ package com.learntodroid.simplealarmclock;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.learntodroid.simplealarmclock.activities.MainActivity;
 
 public class mat_activity extends AppCompatActivity {
 
@@ -15,6 +20,31 @@ public class mat_activity extends AppCompatActivity {
     ProgressBar prog_timer;
 
     GameMath g = new GameMath();
+
+    int secondsRemaining = 30;
+
+
+    CountDownTimer timer = new CountDownTimer(30000, 1000) {
+        @Override
+        public void onTick(long l) {
+            secondsRemaining--;
+            tv_timer.setText(Integer.toString(secondsRemaining) + "sec");
+            prog_timer.setProgress(30 - secondsRemaining);
+        }
+
+        @Override
+        public void onFinish() {
+            btn_answer0.setEnabled(false);
+            btn_answer1.setEnabled(false);
+            btn_answer2.setEnabled(false);
+            btn_answer3.setEnabled(false);
+            tv_bottommessage.setText("Time is up" + g.getNumberCorrect() + "/" + (g.getTotalQuestions() - 1));
+            btn_start.setVisibility(View.VISIBLE);
+            Intent intent = new Intent(mat_activity.this, FailedTask.class);
+            startActivity(intent);
+            finish();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +71,18 @@ public class mat_activity extends AppCompatActivity {
 
         View.OnClickListener startButtonClickListener =  new View.OnClickListener() {
             @Override
+
+
+
+
             public void onClick(View view) {
                 Button start_button = (Button) view;
 
                 start_button.setVisibility(View.INVISIBLE);
+                secondsRemaining = 30;
+                g = new GameMath();
                 nextTurn();
+                timer.start();
             }
         };
 
@@ -55,6 +92,10 @@ public class mat_activity extends AppCompatActivity {
                 Button buttonClicked = (Button) view;
 
                 int answerSelected = Integer.parseInt(buttonClicked.getText().toString());
+
+                g.checkAnswer(answerSelected);
+                tv_score.setText(Integer.toString(g.getScore()));
+                nextTurn();
             }
         };
 
@@ -86,6 +127,8 @@ public class mat_activity extends AppCompatActivity {
         btn_answer1.setEnabled(true);
         btn_answer2.setEnabled(true);
         btn_answer3.setEnabled(true);
+
+        tv_bottommessage.setText(g.getNumberCorrect() + "/" + (g.getTotalQuestions() - 1));
 
 
     }
