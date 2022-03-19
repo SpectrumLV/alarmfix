@@ -50,9 +50,9 @@ public class mat_activity extends AppCompatActivity {
             btn_start.setVisibility(View.VISIBLE);
 
 
-                Intent intent = new Intent(mat_activity.this, FailedTask.class);
-                startActivity(intent);
-                finish();
+            Intent intent = new Intent(mat_activity.this, FailedTask.class);
+            startActivity(intent);
+            finish();
 
 
         }
@@ -69,12 +69,19 @@ public class mat_activity extends AppCompatActivity {
         btn_answer2 = findViewById(R.id.btn_answer2);
         btn_answer3 = findViewById(R.id.btn_answer3);
 
+
         tv_score = findViewById(R.id.tv_score);
         tv_questions = findViewById(R.id.tv_questions);
         tv_timer = findViewById(R.id.tv_timer);
         tv_bottommessage = findViewById(R.id.tv_bottommessage);
 
         prog_timer = findViewById(R.id.prog_timer);
+
+        btn_answer0.setVisibility(View.INVISIBLE);
+        btn_answer1.setVisibility(View.INVISIBLE);
+        btn_answer2.setVisibility(View.INVISIBLE);
+        btn_answer3.setVisibility(View.INVISIBLE);
+
 
         tv_timer.setText("Osec");
         tv_questions.setText("");
@@ -93,6 +100,11 @@ public class mat_activity extends AppCompatActivity {
                 start_button.setVisibility(View.INVISIBLE);
                 secondsRemaining = 30;
                 g = new GameMath();
+
+                btn_answer0.setVisibility(View.VISIBLE);
+                btn_answer1.setVisibility(View.VISIBLE);
+                btn_answer2.setVisibility(View.VISIBLE);
+                btn_answer3.setVisibility(View.VISIBLE);
                 nextTurn();
                 timer.start();
             }

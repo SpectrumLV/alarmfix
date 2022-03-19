@@ -4,10 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundd"
     tools:context=".mat_activity">
 
 
+
     <Button
+        android:height="150dp"
+        android:width="150dp"
+        android:textSize="40dp"
         android:id="@+id/btn_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,8 +22,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/design_default_color_secondary"
+        android:background="@drawable/rect_rounded_button"
         android:text="go"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -71,34 +77,43 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="156dp"
         android:text="TextView"
+        android:textColor="#ffff"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/tv_score"
-        app:layout_constraintHorizontal_bias="0.631"
-        app:layout_constraintStart_toEndOf="@+id/tv_timer"
-        app:layout_constraintTop_toBottomOf="@+id/prog_timer" />
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prog_timer"
+        app:layout_constraintVertical_bias="0.029" />
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_width="160dp"
+        android:layout_height="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_questions"
-        app:layout_constraintVertical_bias="0.707">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.877">
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="300dp"
+            android:layout_height="10dp">
 
             <Button
+                android:layout_marginBottom="10dp"
                 android:id="@+id/btn_answer0"
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:background="@drawable/rect_rounded_button"
+                android:text="Button"
+                android:textColor="#000000"/>
+
         </TableRow>
+
 
         <TableRow
             android:layout_width="match_parent"
@@ -106,22 +121,28 @@
 
             <Button
                 android:id="@+id/btn_answer1"
+                android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:background="@drawable/rect_rounded_button"
+                android:text="Button"
+                android:textColor="#000000"/>
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="100dp"
+            android:layout_height="100dp">
 
             <Button
                 android:id="@+id/btn_answer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:background="@drawable/rect_rounded_button"
+                android:text="Button"
+                android:textColor="#000000" />
         </TableRow>
 
         <TableRow
@@ -131,9 +152,11 @@
             <Button
                 android:id="@+id/btn_answer3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:background="@drawable/rect_rounded_button"
+                android:text="Button"
+                android:textColor="#000000"/>
         </TableRow>
     </TableLayout>
 
