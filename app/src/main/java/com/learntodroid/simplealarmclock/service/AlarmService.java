@@ -43,7 +43,7 @@ public class AlarmService extends Service {
 
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setContentTitle(alarmTitle)
-                .setContentText("Ring Ring .. Ring Ring")
+                .setContentText("Hey you have an alram")
                 .setSmallIcon(R.drawable.ic_alarm_black_24dp)
                 .setContentIntent(pendingIntent)
                 .build();

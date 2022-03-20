@@ -143,6 +143,10 @@ public class RingActivity extends AppCompatActivity {
     public void openActivity4() {
         Intent intent = new Intent(this, activity_phys.class);
         startActivity(intent);
+
+        Intent intentService = new Intent(getApplicationContext(), AlarmService.class);
+        getApplicationContext().stopService(intentService);
+        finish();
     }
 
     private void animateClock() {

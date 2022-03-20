@@ -31,13 +31,18 @@
         <activity
             android:name=".mat_activity"
             android:exported="false" />
-        <activity android:name=".activities.MainActivity" />
-        <activity android:name=".activities.RingActivity">
+
+
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+
+        <activity android:name=".activities.RingActivity">
         </activity>
 
         <provider
