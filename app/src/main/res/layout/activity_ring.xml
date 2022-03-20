@@ -65,7 +65,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.941" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTextPersonName"
         android:layout_width="187dp"
         android:layout_height="78dp"
@@ -82,25 +82,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.185" />
 
-    <EditText
+    <TextView
         android:id="@+id/time"
+
         android:layout_width="148dp"
         android:layout_height="143dp"
 
+        android:background="@null"
         android:ems="10"
         android:inputType="time"
         android:text="12"
-        android:textColor="#bababa"
+        android:textColor="#FFFFFF"
         android:textSize="90dp"
-        android:background="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.429"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.335" />
+        app:layout_constraintVertical_bias="0.339" />
 
-    <EditText
+    <TextView
         android:id="@+id/time2"
         android:layout_width="148dp"
         android:layout_height="143dp"
@@ -108,7 +109,7 @@
         android:ems="10"
         android:inputType="time"
         android:text="45"
-        android:textColor="#bababa"
+        android:textColor="#FFFFFF"
         android:textSize="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,7 +118,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.49" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="345dp"
         android:layout_height="66dp"

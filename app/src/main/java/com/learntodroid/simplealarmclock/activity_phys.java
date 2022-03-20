@@ -19,12 +19,24 @@ public class activity_phys extends AppCompatActivity {
     int secondsRemaining = 30;
 
 
-    CountDownTimer timer = new CountDownTimer(3000,1000) {
+    CountDownTimer timer = new CountDownTimer(30000,1000) {
         @Override
         public void onTick(long l) {
             secondsRemaining--;
             prog_timer.setProgress(30-secondsRemaining);
             tv_timer.setText(Integer.toString(secondsRemaining) + "sec");
+
+            if(secondsRemaining == 15) {
+                button.setVisibility(View.VISIBLE);
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(activity_phys.this, ActivitySuccess.class);
+                        startActivity(intent);
+                    timer.cancel();
+                    }
+                });
+            }
         }
 
 
@@ -49,18 +61,7 @@ public class activity_phys extends AppCompatActivity {
         secondsRemaining = 30;
         timer.start();
 
-       // if(secondsRemaining == 15) {
-            button.setVisibility(View.VISIBLE);
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(activity_phys.this, ActivitySuccess.class);
-                    startActivity(intent);
 
-                }
-            });
-
-       // }
 
 
     }

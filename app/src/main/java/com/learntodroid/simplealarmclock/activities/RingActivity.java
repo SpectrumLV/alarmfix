@@ -4,9 +4,11 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +21,10 @@ import com.learntodroid.simplealarmclock.data.Alarm;
 import com.learntodroid.simplealarmclock.mat_activity;
 import com.learntodroid.simplealarmclock.service.AlarmService;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Random;
 
 import butterknife.BindView;
@@ -30,10 +35,27 @@ public class RingActivity extends AppCompatActivity {
     @BindView(R.id.activity_ring_snooze) Button snooze;
     @BindView(R.id.activity_ring_clock) ImageView clock;
     private Button button;
+    TextView time, time2;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ring);
+
+        time = findViewById(R.id.time);
+        time2 = findViewById(R.id.time2);
+
+        Calendar currentTime = Calendar.getInstance();
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
+   String dateTime = simpleDateFormat.format(currentTime.getTime());
+      String[] splitted = dateTime.split(":");
+
+        time.setText(splitted[0]);
+        time2.setText(splitted[1]);
+
+
+
 
 
         button = (Button) findViewById(R.id.math_btn);
