@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.lang.reflect.AnnotatedElement;
 import java.util.Random;
@@ -92,6 +93,11 @@ public class activity_quiz extends AppCompatActivity {
                     score.setText("Score: " + mScore);
                     updateQuestoin(r.nextInt(mQestonsLength));
                 }
+                else{
+                    mScore--;
+                    Toast.makeText(activity_quiz.this, "Are you sure about that?", Toast.LENGTH_SHORT).show();
+                    score.setText("Score: " + mScore);
+                }
             }
         });
 
@@ -102,6 +108,11 @@ public class activity_quiz extends AppCompatActivity {
                     mScore++;
                     score.setText("Score: " + mScore);
                     updateQuestoin(r.nextInt(mQestonsLength));
+                }
+                else{
+                    mScore--;
+                    Toast.makeText(activity_quiz.this, "Are you sure about that?", Toast.LENGTH_SHORT).show();
+                    score.setText("Score: " + mScore);
                 }
             }
         });
@@ -114,6 +125,11 @@ public class activity_quiz extends AppCompatActivity {
                     score.setText("Score: " + mScore);
                     updateQuestoin(r.nextInt(mQestonsLength));
                 }
+                else{
+                    mScore--;
+                    Toast.makeText(activity_quiz.this, "Are you sure about that?", Toast.LENGTH_SHORT).show();
+                    score.setText("Score: " + mScore);
+                }
             }
         });
 
@@ -124,6 +140,10 @@ public class activity_quiz extends AppCompatActivity {
                     mScore++;
                     score.setText("Score: " + mScore);
                     updateQuestoin(r.nextInt(mQestonsLength));
+                }else{
+                    mScore--;
+                    Toast.makeText(activity_quiz.this, "Are you sure about that?", Toast.LENGTH_SHORT).show();
+                    score.setText("Score: " + mScore);
                 }
             }
         });
