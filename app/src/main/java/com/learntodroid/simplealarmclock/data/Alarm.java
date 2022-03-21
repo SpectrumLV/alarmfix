@@ -147,7 +147,7 @@ public class Alarm {
         if (!recurring) {
             String toastText = null;
             try {
-                toastText = String.format("Alarm %s scheduled for %s at %02d:%02d", title, DayUtil.toDay(calendar.get(Calendar.DAY_OF_WEEK)), hour, minute);
+                toastText = String.format("%s scheduled for %s at %02d:%02d", title, DayUtil.toDay(calendar.get(Calendar.DAY_OF_WEEK)), hour, minute);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -159,7 +159,7 @@ public class Alarm {
                     alarmPendingIntent
             );
         } else {
-            String toastText = String.format("Recurring Alarm %s scheduled for %s at %02d:%02d", title, getRecurringDaysText(), hour, minute);
+            String toastText = String.format(" %s scheduled for %s at %02d:%02d", title, getRecurringDaysText(), hour, minute);
             Toast.makeText(context, toastText, Toast.LENGTH_LONG).show();
 
             final long RUN_DAILY = 24 * 60 * 60 * 1000;
