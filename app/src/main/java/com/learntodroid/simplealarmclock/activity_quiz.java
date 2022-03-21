@@ -9,8 +9,10 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.AnalogClock;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.lang.reflect.AnnotatedElement;
 import java.util.Random;
@@ -19,6 +21,7 @@ public class activity_quiz extends AppCompatActivity {
     Button answer1, answer2, answer3, answer4;
     ProgressBar prog_timer;
     TextView tv_timer, score, question;
+    ImageView image;
 
     int secondsRemaining = 30;
 
@@ -76,6 +79,7 @@ public class activity_quiz extends AppCompatActivity {
 
         secondsRemaining = 30;
         timer.start();
+        image = findViewById(R.id.image);
 
         score.setText("Score: " + mScore);
 
@@ -89,6 +93,11 @@ public class activity_quiz extends AppCompatActivity {
                     score.setText("Score: " + mScore);
                     updateQuestoin(r.nextInt(mQestonsLength));
                 }
+                else{
+                    mScore--;
+                    Toast.makeText(activity_quiz.this, "Are you sure about that?", Toast.LENGTH_SHORT).show();
+                    score.setText("Score: " + mScore);
+                }
             }
         });
 
@@ -99,6 +108,11 @@ public class activity_quiz extends AppCompatActivity {
                     mScore++;
                     score.setText("Score: " + mScore);
                     updateQuestoin(r.nextInt(mQestonsLength));
+                }
+                else{
+                    mScore--;
+                    Toast.makeText(activity_quiz.this, "Are you sure about that?", Toast.LENGTH_SHORT).show();
+                    score.setText("Score: " + mScore);
                 }
             }
         });
@@ -111,6 +125,11 @@ public class activity_quiz extends AppCompatActivity {
                     score.setText("Score: " + mScore);
                     updateQuestoin(r.nextInt(mQestonsLength));
                 }
+                else{
+                    mScore--;
+                    Toast.makeText(activity_quiz.this, "Are you sure about that?", Toast.LENGTH_SHORT).show();
+                    score.setText("Score: " + mScore);
+                }
             }
         });
 
@@ -121,6 +140,10 @@ public class activity_quiz extends AppCompatActivity {
                     mScore++;
                     score.setText("Score: " + mScore);
                     updateQuestoin(r.nextInt(mQestonsLength));
+                }else{
+                    mScore--;
+                    Toast.makeText(activity_quiz.this, "Are you sure about that?", Toast.LENGTH_SHORT).show();
+                    score.setText("Score: " + mScore);
                 }
             }
         });
@@ -133,8 +156,9 @@ public class activity_quiz extends AppCompatActivity {
         answer2.setText(mQuestions.getChoice2(num));
         answer3.setText(mQuestions.getChoice3(num));
         answer4.setText(mQuestions.getChoice4(num));
-
+        image.setImageDrawable(getResources().getDrawable(mQuestions.images[num]));
         mAnswer = mQuestions.getCorrectAnswer(num);
+
     }
 
 
