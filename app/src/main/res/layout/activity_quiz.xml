@@ -13,7 +13,7 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:background="@drawable/frame"
-        android:src="@drawable/kualalumpur1"
+        android:src="@drawable/riga1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
