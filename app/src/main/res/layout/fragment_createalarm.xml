@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/backgroundd"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
@@ -14,6 +13,7 @@
 
 
         <TextView
+
             android:id="@+id/fragment_createalarm_scheduleAlarmHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="0dp"
-
+            android:visibility="gone"
             />
 
         <LinearLayout
@@ -41,7 +41,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.9"
-                android:timePickerMode="spinner" />
+                android:timePickerMode="spinner"
+                />
         </LinearLayout>
 
         <EditText
@@ -49,7 +50,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Alarm Title"
-            app:layout_constraintTop_toBottomOf="@+id/fragment_createalarm_timePickerLayout" />
+            android:textColor="#ffffff"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_createalarm_timePickerLayout"
+            tools:layout_editor_absoluteX="0dp" />
 
         <CheckBox
             android:id="@+id/fragment_createalarm_recurring"
