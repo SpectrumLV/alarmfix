@@ -133,11 +133,19 @@ public class RingActivity extends AppCompatActivity {
     public void openActivity2() {
         Intent intent = new Intent(this, mat_activity.class);
         startActivity(intent);
+
+        Intent intentService = new Intent(getApplicationContext(), AlarmService.class);
+        getApplicationContext().stopService(intentService);
+        finish();
     }
 
     public void openActivity3() {
         Intent intent = new Intent(this, activity_quiz.class);
         startActivity(intent);
+
+        Intent intentService = new Intent(getApplicationContext(), AlarmService.class);
+        getApplicationContext().stopService(intentService);
+        finish();
     }
 
     public void openActivity4() {
