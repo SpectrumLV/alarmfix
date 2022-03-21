@@ -88,16 +88,8 @@ public class mat_activity extends AppCompatActivity {
         tv_bottommessage.setText("Press Go");
         tv_score.setText("0pts");
 
-        View.OnClickListener startButtonClickListener =  new View.OnClickListener() {
-            @Override
 
 
-
-
-            public void onClick(View view) {
-                Button start_button = (Button) view;
-
-                start_button.setVisibility(View.INVISIBLE);
                 secondsRemaining = 30;
                 g = new GameMath();
 
@@ -107,8 +99,7 @@ public class mat_activity extends AppCompatActivity {
                 btn_answer3.setVisibility(View.VISIBLE);
                 nextTurn();
                 timer.start();
-            }
-        };
+
 
         View.OnClickListener answerButtonClickListener = new View.OnClickListener() {
             @Override
@@ -126,7 +117,7 @@ public class mat_activity extends AppCompatActivity {
             }
         };
 
-        btn_start.setOnClickListener(startButtonClickListener);
+       // btn_start.setOnClickListener(startButtonClickListener);
 
         btn_answer0.setOnClickListener(answerButtonClickListener);
         btn_answer1.setOnClickListener(answerButtonClickListener);
