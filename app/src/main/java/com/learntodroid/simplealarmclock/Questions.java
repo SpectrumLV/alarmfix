@@ -2,21 +2,21 @@ package com.learntodroid.simplealarmclock;
 
 public class Questions {
     public String mQuestions[] = {
-            "Which is capital of Latvia?",
-            "Which is capital of England?",
-            "Which is capital of Russia?",
-            "Which is capital of Spain?",
-            "Which is capital of USA?",
-            "Which is capital of Finland?",
-            "Which is capital of Canada?",
-            "Which is capital of Lithuania?",
-            "Which is capital of Japan?",
-                "Which is capital of France?",
-                "Which is capital of Italy?",
-                "Which is capital of Germany?",
-                "Which is capital of Thailand?",
-                "Which is capital of New Zealand?",
-                "Which is capital of South Africa?",
+            "What is the capital of Latvia?",
+            "What is the capital of England?",
+            "What is the capital of Russia?",
+            "What is the capital of Spain?",
+            "What is the capital of the USA?",
+            "What is the capital of Finland?",
+            "What is the capital of Canada?",
+            "What is the capital of Lithuania?",
+            "What is the capital of Japan?",
+                "What is the capital of France?",
+                "What is the capital of Italy?",
+                "What is the capital of Germany?",
+                "What is the capital of Thailand?",
+                "What is the capital of New Zealand?",
+                "What is the capital of South Africa?",
     };
 
     private String mChoices[] [] = {
@@ -26,7 +26,7 @@ public class Questions {
             {"Helsinki", "Tokyo", "Rio", "Madrid"},
             {"Helsinki", "Tokyo", "Rio", "Washington Dc"},
             {"Africa", "Tokyo", "Rio", "Helsinki"},
-            {"Helsinki", "Tokyo", "Rio", "Otava"},
+            {"Helsinki", "Tokyo", "Rio", "Ottawa"},
             {"Helsinki", "Tokyo", "Rio", "Vilnius"},
             {"Helsinki", "Tokyo", "Rio", "Vilnius"},
             {"Helsinki", "Tokyo", "Rio", "Paris"},
@@ -37,7 +37,7 @@ public class Questions {
             {"Helsinki", "Tokyo", "Rio", "Cape Town"},
     };
 
-    private String mCorrectAnswers[] = {"Riga", "London","Moscow", "Madrid", "Washington Dc", "Helsinki", "Otava", "Vilnius", "Tokyo",
+    private String mCorrectAnswers[] = {"Riga", "London","Moscow", "Madrid", "Washington Dc", "Helsinki", "Ottawa", "Vilnius", "Tokyo",
     "Paris", "Rome", "Berlin", "Bangkok", "Wellington", "Cape Town"};
 
     public String getQuestions(int a) {
