@@ -35,17 +35,10 @@
             android:layout_marginTop="50dp">
 
 
-
-            <TimePicker
-                android:id="@+id/fragment_createalarm_timePicker"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.9"
-                android:timePickerMode="spinner"
-                />
         </LinearLayout>
 
         <EditText
+            android:visibility="gone"
             android:id="@+id/fragment_createalarm_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -121,15 +114,24 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Schedule Alarm"
             android:background="@drawable/rect_rounded_button"
+            android:text="Schedule Alarm"
             android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fragment_createalarm_recurring"
-            app:layout_constraintVertical_bias="0.201" />
+            app:layout_constraintVertical_bias="0.655" />
+
+        <TimePicker
+            android:id="@+id/fragment_createalarm_timePicker"
+            android:layout_width="398dp"
+            android:layout_height="253dp"
+            android:layout_weight="0.9"
+            android:timePickerMode="spinner"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="252dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

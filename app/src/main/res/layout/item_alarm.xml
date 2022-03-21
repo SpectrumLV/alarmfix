@@ -48,6 +48,7 @@
             </LinearLayout>
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/item_alarm_title"
                 android:layout_width="126dp"
                 android:layout_height="48dp"
