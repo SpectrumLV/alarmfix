@@ -130,8 +130,12 @@
             android:layout_height="253dp"
             android:layout_weight="0.9"
             android:timePickerMode="spinner"
-            tools:layout_editor_absoluteX="6dp"
-            tools:layout_editor_absoluteY="252dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fragment_createalarm_timePickerLayout"
+            app:layout_constraintVertical_bias="0.384" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
