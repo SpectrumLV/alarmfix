@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,10 +26,15 @@ public class AlarmsListFragment extends Fragment implements OnToggleAlarmListene
     private AlarmsListViewModel alarmsListViewModel;
     private RecyclerView alarmsRecyclerView;
     private Button addAlarm;
+    TextView time, time2;
+
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         alarmRecyclerViewAdapter = new AlarmRecyclerViewAdapter(this);
         alarmsListViewModel = ViewModelProviders.of(this).get(AlarmsListViewModel.class);
@@ -71,5 +77,8 @@ public class AlarmsListFragment extends Fragment implements OnToggleAlarmListene
             alarm.schedule(getContext());
             alarmsListViewModel.update(alarm);
         }
+
     }
+
+
 }
