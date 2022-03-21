@@ -9,6 +9,7 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.AnalogClock;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ public class activity_quiz extends AppCompatActivity {
     Button answer1, answer2, answer3, answer4;
     ProgressBar prog_timer;
     TextView tv_timer, score, question;
+    ImageView image;
 
     int secondsRemaining = 30;
 
@@ -76,6 +78,7 @@ public class activity_quiz extends AppCompatActivity {
 
         secondsRemaining = 30;
         timer.start();
+        image = findViewById(R.id.image);
 
         score.setText("Score: " + mScore);
 
@@ -133,8 +136,9 @@ public class activity_quiz extends AppCompatActivity {
         answer2.setText(mQuestions.getChoice2(num));
         answer3.setText(mQuestions.getChoice3(num));
         answer4.setText(mQuestions.getChoice4(num));
-
+        image.setImageDrawable(getResources().getDrawable(mQuestions.images[num]));
         mAnswer = mQuestions.getCorrectAnswer(num);
+
     }
 
 

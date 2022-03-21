@@ -1,5 +1,7 @@
 package com.learntodroid.simplealarmclock;
 
+import android.graphics.drawable.Drawable;
+
 public class Questions {
     public String mQuestions[] = {
             "What is the capital of Latvia?",
@@ -40,6 +42,24 @@ public class Questions {
     private String mCorrectAnswers[] = {"Riga", "London","Moscow", "Madrid", "Washington Dc", "Helsinki", "Ottawa", "Vilnius", "Tokyo",
     "Paris", "Rome", "Berlin", "Bangkok", "Wellington", "Cape Town"};
 
+    public int images[] = {
+            R.drawable.riga1,
+            R.drawable.london2,
+            R.drawable.moscow3,
+            R.drawable.madrid4,
+            R.drawable.washington5,
+            R.drawable.helsinki6,
+            R.drawable.ottawa7,
+            R.drawable.vilnus8,
+            R.drawable.tokyo9,
+            R.drawable.paris10,
+            R.drawable.rome11,
+            R.drawable.berlin12,
+            R.drawable.bangkok13,
+            R.drawable.wellington14,
+            R.drawable.capetown15,
+    };
+
     public String getQuestions(int a) {
         String question = mQuestions[a];
         return question;
@@ -70,4 +90,6 @@ public class Questions {
         String answer =mCorrectAnswers[a];
         return answer;
     }
+
+
 }
