@@ -39,8 +39,8 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
             startRescheduleAlarmsService(context);
         }
         else {
-            String toastText = String.format("Alarm Received");
-            Toast.makeText(context, toastText, Toast.LENGTH_SHORT).show();
+           // String toastText = String.format("Alarm Received");
+            //Toast.makeText(context, toastText, Toast.LENGTH_SHORT).show();
             if (!intent.getBooleanExtra(RECURRING, false)) {
                 startAlarmService(context, intent);
             } {
