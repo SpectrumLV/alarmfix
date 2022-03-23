@@ -49,6 +49,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="24dp"
         android:text="TextView"
+        android:textColor="#ffff"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
@@ -63,6 +64,8 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="28dp"
         android:text="TextView"
+        android:textColor="#ffff"
+
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.91"
@@ -156,7 +159,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/rect_rounded_button"
                 android:text="Button"
-                android:textColor="#000000"/>
+                android:textColor="#000000" />
         </TableRow>
     </TableLayout>
 
@@ -167,6 +170,7 @@
         android:layout_marginBottom="40dp"
         android:text="TextView"
         android:textSize="24sp"
+        android:textColor="#ffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
