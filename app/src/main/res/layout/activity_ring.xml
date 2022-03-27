@@ -12,7 +12,7 @@
 
     <ImageView
         android:id="@+id/activity_ring_clock"
-        android:layout_width="184dp"
+        android:layout_width="185dp"
         android:layout_height="123dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
