@@ -7,20 +7,23 @@
     android:background="@drawable/backgroundd"
     tools:context=".FailedTask">
 
-    <ImageView
+
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/quote"
         android:layout_width="300dp"
         android:layout_height="300dp"
-
-
+        android:layout_centerInParent="true"
+        android:layout_margin="5dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
         android:src="@drawable/quote"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.377" />
-
+        app:layout_constraintVertical_bias="0.333"
+        app:shapeAppearanceOverlay="@style/roundimageview" />
 
     <TextView
         android:id="@+id/textView"
