@@ -2,6 +2,5 @@
 <resources>
     <style name="MYtimepickerstyle">
         <item name="android:textSize">24dp</item>
-        <item name="android:textColor">@color/balts</item>
     </style>
 </resources>
