@@ -38,44 +38,54 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.136" />
 
-    <ImageButton
 
+    <Button
         android:id="@+id/btn_more"
-        android:layout_width="378dp"
-        android:layout_height="80dp"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/rect_rounded_button"
-        android:src="@drawable/buttonmore"
+        android:text="I want more"
+        app:cornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.725" />
+        app:layout_constraintVertical_bias="0.735" />
 
-    <ImageButton
+    <Button
+
         android:id="@+id/btn_share"
-        android:layout_width="378dp"
-        android:layout_height="80dp"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/rect_rounded_button"
-        android:src="@drawable/buttonshare"
+        android:text="Share"
+        app:cornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.845" />
+        app:layout_constraintVertical_bias="0.833" />
 
-    <ImageButton
+    <Button
+
         android:id="@+id/btn_spotify"
-        android:layout_width="378dp"
-        android:layout_height="80dp"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/rect_rounded_button"
-        android:src="@drawable/buttonspotify"
+        android:text="Good vibes"
+        app:cornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.965" />
+        app:layout_constraintVertical_bias="0.932" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
