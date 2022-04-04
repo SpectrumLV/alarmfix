@@ -23,8 +23,11 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:background="@drawable/rect_rounded_button"
-        android:text="go"
-        android:textColor="#000000"
+        android:text="GO"
+        android:textColor="#000000"        android:fontFamily="@font/robotto"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -113,6 +116,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/rect_rounded_button"
                 android:text="Button"
+                android:fontFamily="@font/robotto"
+                android:textStyle="bold"
+                android:textAllCaps="false"
                 android:textColor="#000000"/>
 
         </TableRow>
@@ -130,6 +136,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/rect_rounded_button"
                 android:text="Button"
+                android:fontFamily="@font/robotto"
+                android:textStyle="bold"
+                android:textAllCaps="false"
                 android:textColor="#000000"/>
         </TableRow>
 
@@ -145,6 +154,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/rect_rounded_button"
                 android:text="Button"
+                android:fontFamily="@font/robotto"
+                android:textStyle="bold"
+                android:textAllCaps="false"
                 android:textColor="#000000" />
         </TableRow>
 
@@ -159,6 +171,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/rect_rounded_button"
                 android:text="Button"
+                android:fontFamily="@font/robotto"
+                android:textStyle="bold"
+                android:textAllCaps="false"
                 android:textColor="#000000" />
         </TableRow>
     </TableLayout>
