@@ -24,21 +24,21 @@ public class Questions {
     };
 
     private String mChoices[] [] = {
-            {"Helsinki", "Tokyo", "Rio", "Riga"},
-            {"London", "Tokyo", "Rio","Helsinki"},
+            {"Helsinki", "Tokyo", "Paris", "Riga"},
+            {"London", "New York", "Rio","Helsinki"},
             {"Helsinki", "Moscow", "Rio", "Tokyo"},
             {"Helsinki", "Tokyo", "Madrid", "Rio"},
-            {"Helsinki", "Tokyo", "Rio", "Washington Dc"},
+            {"Helsinki", "Tokyo", "New York", "Washington Dc"},
             {"Helsinki", "Tokyo", "Rio", "Africa"},
-            {"Helsinki", "Ottawa", "Rio", "Tokyo"},
+            {"Singapore", "Ottawa", "Rio", "Dubai"},
             {"Helsinki", "Tokyo", "Rio", "Vilnius"},
             {"Helsinki", "Tokyo", "Rio", "Vilnius"},
             {"Paris", "Tokyo", "Rio", "Helsinki"},
             {"Helsinki", "Rome", "Rio", "Tokyo"},
-            {"Helsinki", "Tokyo", "Berlin", "Rio"},
+            {"Helsinki", "Rome", "Berlin", "Rio"},
             {"Bangkok", "Tokyo", "Rio", "Helsinki"},
             {"Helsinki", "Tokyo", "Wellington", "Rio"},
-            {"Cape Town", "Tokyo", "Rio", "Japan"},
+            {"Cape Town", "Tokyo", "Singapore", "Japan"},
     };
 
     private String mCorrectAnswers[] = {"Riga", "London","Moscow", "Madrid", "Washington Dc", "Helsinki", "Ottawa", "Vilnius", "Tokyo",
