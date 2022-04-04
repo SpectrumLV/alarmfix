@@ -2,6 +2,8 @@ package com.learntodroid.simplealarmclock;
 
 import android.graphics.drawable.Drawable;
 
+import java.util.Random;
+
 public class Questions {
     public String mQuestions[] = {
             "What is the capital of Latvia?",
@@ -23,20 +25,20 @@ public class Questions {
 
     private String mChoices[] [] = {
             {"Helsinki", "Tokyo", "Rio", "Riga"},
-            {"Helsinki", "Tokyo", "Rio", "London"},
-            {"Helsinki", "Tokyo", "Rio", "Moscow"},
-            {"Helsinki", "Tokyo", "Rio", "Madrid"},
+            {"London", "Tokyo", "Rio","Helsinki"},
+            {"Helsinki", "Moscow", "Rio", "Tokyo"},
+            {"Helsinki", "Tokyo", "Madrid", "Rio"},
             {"Helsinki", "Tokyo", "Rio", "Washington Dc"},
-            {"Africa", "Tokyo", "Rio", "Helsinki"},
-            {"Helsinki", "Tokyo", "Rio", "Ottawa"},
+            {"Helsinki", "Tokyo", "Rio", "Africa"},
+            {"Helsinki", "Ottawa", "Rio", "Tokyo"},
             {"Helsinki", "Tokyo", "Rio", "Vilnius"},
             {"Helsinki", "Tokyo", "Rio", "Vilnius"},
-            {"Helsinki", "Tokyo", "Rio", "Paris"},
-            {"Helsinki", "Tokyo", "Rio", "Rome"},
-            {"Helsinki", "Tokyo", "Rio", "Berlin"},
-            {"Helsinki", "Tokyo", "Rio", "Bangkok"},
-            {"Helsinki", "Tokyo", "Rio", "Wellington"},
-            {"Helsinki", "Tokyo", "Rio", "Cape Town"},
+            {"Paris", "Tokyo", "Rio", "Helsinki"},
+            {"Helsinki", "Rome", "Rio", "Tokyo"},
+            {"Helsinki", "Tokyo", "Berlin", "Rio"},
+            {"Bangkok", "Tokyo", "Rio", "Helsinki"},
+            {"Helsinki", "Tokyo", "Wellington", "Rio"},
+            {"Cape Town", "Tokyo", "Rio", "Japan"},
     };
 
     private String mCorrectAnswers[] = {"Riga", "London","Moscow", "Madrid", "Washington Dc", "Helsinki", "Ottawa", "Vilnius", "Tokyo",
