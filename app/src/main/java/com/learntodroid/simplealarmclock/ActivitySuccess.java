@@ -20,13 +20,13 @@ import java.io.File;
 import java.io.FileOutputStream;
 
 public class ActivitySuccess extends AppCompatActivity {
-    private ImageButton button;
+    private Button button;
     ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_success);
-        button = (ImageButton) findViewById(R.id.btn_share);
+        button = (Button) findViewById(R.id.btn_share);
         imageView = findViewById(R.id.quote);
 
 
@@ -42,7 +42,7 @@ public class ActivitySuccess extends AppCompatActivity {
             }
         });
 
-        button = (ImageButton) findViewById(R.id.btn_more);
+        button = (Button) findViewById(R.id.btn_more);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,7 +52,7 @@ public class ActivitySuccess extends AppCompatActivity {
         });
 
 
-        button = (ImageButton) findViewById(R.id.btn_spotify);
+        button = (Button) findViewById(R.id.btn_spotify);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

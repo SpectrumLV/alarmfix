@@ -57,8 +57,11 @@
 
             <Switch
                 android:id="@+id/item_alarm_started"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="278dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:checked="false"
+                android:theme="@style/SCBSwitch"
                 android:layout_weight="1" />
 
         </LinearLayout>
