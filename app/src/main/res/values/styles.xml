@@ -20,7 +20,7 @@
 
     <style name="SCBSwitch" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- active thumb & track color (30% transparency) -->
-        <item name="colorControlActivated">#000000</item>
+        <item name="colorControlActivated">#9bafc7</item>
 
         <!-- inactive thumb color -->
         <item name="colorSwitchThumbNormal">#f1f1f1
