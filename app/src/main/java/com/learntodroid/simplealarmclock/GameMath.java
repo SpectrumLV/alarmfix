@@ -41,7 +41,7 @@ public class GameMath {
             getNumberIncorrect++;
             isCorrect = false;
         }
-        score = numberCorrect * 10 -getNumberIncorrect * 10;
+        score = numberCorrect * 1 -getNumberIncorrect * 1;
         return isCorrect;
     }
 

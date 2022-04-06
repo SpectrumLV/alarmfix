@@ -4,16 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundd"
+    android:background="@drawable/mathbg"
     tools:context=".mat_activity">
 
 
-
     <Button
-        android:visibility="gone"
-        android:height="150dp"
-        android:width="150dp"
-        android:textSize="40dp"
         android:id="@+id/btn_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,11 +18,16 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:width="150dp"
+        android:height="150dp"
         android:background="@drawable/rect_rounded_button"
+        android:fontFamily="@font/roboto"
         android:text="GO"
-        android:textColor="#000000"        android:fontFamily="@font/robotto"
-        android:textStyle="bold"
         android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:visibility="gone"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,29 +52,32 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto"
         android:text="TextView"
         android:textColor="#ffff"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prog_timer" />
+        app:layout_constraintTop_toBottomOf="@+id/prog_timer"
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/tv_score"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="28dp"
-        android:text="TextView"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto"
+        android:text=""
         android:textColor="#ffff"
-
-        android:textSize="24sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.91"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prog_timer" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
 
     <TextView
         android:id="@+id/tv_questions"
@@ -83,10 +86,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="156dp"
+        android:fontFamily="@font/roboto"
         android:text="TextView"
         android:textColor="#ffff"
         android:textSize="24sp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -110,17 +113,17 @@
             android:layout_height="10dp">
 
             <Button
-                android:layout_marginBottom="10dp"
                 android:id="@+id/btn_answer0"
                 android:layout_width="100dp"
                 android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/rect_rounded_button"
+                android:fontFamily="@font/roboto"
                 android:text="Button"
-                android:fontFamily="@font/robotto"
-                android:textStyle="bold"
                 android:textAllCaps="false"
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:textStyle="bold" />
 
         </TableRow>
 
@@ -131,16 +134,16 @@
 
             <Button
                 android:id="@+id/btn_answer1"
-                android:layout_marginBottom="10dp"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/rect_rounded_button"
+                android:fontFamily="@font/roboto"
                 android:text="Button"
-                android:fontFamily="@font/robotto"
-                android:textStyle="bold"
                 android:textAllCaps="false"
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -149,16 +152,16 @@
 
             <Button
                 android:id="@+id/btn_answer2"
-                android:layout_marginBottom="10dp"
                 android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/rect_rounded_button"
+                android:fontFamily="@font/roboto"
                 android:text="Button"
-                android:fontFamily="@font/robotto"
-                android:textStyle="bold"
                 android:textAllCaps="false"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -167,15 +170,15 @@
 
             <Button
                 android:id="@+id/btn_answer3"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
                 android:background="@drawable/rect_rounded_button"
+                android:fontFamily="@font/roboto"
                 android:text="Button"
-                android:fontFamily="@font/robotto"
-                android:textStyle="bold"
                 android:textAllCaps="false"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textStyle="bold" />
         </TableRow>
     </TableLayout>
 
@@ -184,12 +187,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
+        android:fontFamily="@font/roboto"
         android:text="TextView"
-        android:textSize="24sp"
         android:textColor="#ffff"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

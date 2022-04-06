@@ -38,9 +38,9 @@ public class activity_quiz extends AppCompatActivity {
         public void onTick(long l) {
             secondsRemaining--;
             prog_timer.setProgress(30-secondsRemaining);
-            tv_timer.setText(Integer.toString(secondsRemaining) + "sec");
+            tv_timer.setText("Time left: " + Integer.toString(secondsRemaining));
 
-            if (mScore == 3){
+            if (mScore == 5){
                 Intent intent = new Intent(activity_quiz.this, ActivitySuccess.class);
                 startActivity(intent);
                 finish();
@@ -81,7 +81,7 @@ public class activity_quiz extends AppCompatActivity {
         timer.start();
         image = findViewById(R.id.image);
 
-        score.setText("Score: " + mScore);
+        score.setText("Score: " + mScore + "/5");
 
         updateQuestoin(r.nextInt(mQestonsLength));
 
@@ -90,13 +90,13 @@ public class activity_quiz extends AppCompatActivity {
             public void onClick(View view) {
                 if (answer1.getText() == mAnswer){
                     mScore++;
-                    score.setText("Score: " + mScore);
+                    score.setText("Score: " + mScore+ "/5");
                     updateQuestoin(r.nextInt(mQestonsLength));
                 }
                 else{
                     mScore--;
                     Toast.makeText(activity_quiz.this, "Are you sure about that?", Toast.LENGTH_SHORT).show();
-                    score.setText("Score: " + mScore);
+                    score.setText("Score: " + mScore+ "/5");
                 }
             }
         });
@@ -106,13 +106,13 @@ public class activity_quiz extends AppCompatActivity {
             public void onClick(View view) {
                 if (answer2.getText() == mAnswer){
                     mScore++;
-                    score.setText("Score: " + mScore);
+                    score.setText("Score: " + mScore+ "/5");
                     updateQuestoin(r.nextInt(mQestonsLength));
                 }
                 else{
                     mScore--;
                     Toast.makeText(activity_quiz.this, "Are you sure about that?", Toast.LENGTH_SHORT).show();
-                    score.setText("Score: " + mScore);
+                    score.setText("Score: " + mScore+ "/5");
                 }
             }
         });
@@ -122,13 +122,13 @@ public class activity_quiz extends AppCompatActivity {
             public void onClick(View view) {
                 if (answer3.getText() == mAnswer){
                     mScore++;
-                    score.setText("Score: " + mScore);
+                    score.setText("Score: " + mScore+ "/5");
                     updateQuestoin(r.nextInt(mQestonsLength));
                 }
                 else{
                     mScore--;
                     Toast.makeText(activity_quiz.this, "Are you sure about that?", Toast.LENGTH_SHORT).show();
-                    score.setText("Score: " + mScore);
+                    score.setText("Score: " + mScore+ "/5");
                 }
             }
         });
@@ -138,12 +138,12 @@ public class activity_quiz extends AppCompatActivity {
             public void onClick(View view) {
                 if (answer4.getText() == mAnswer){
                     mScore++;
-                    score.setText("Score: " + mScore);
+                    score.setText("Score: " + mScore+ "/5");
                     updateQuestoin(r.nextInt(mQestonsLength));
                 }else{
                     mScore--;
                     Toast.makeText(activity_quiz.this, "Are you sure about that?", Toast.LENGTH_SHORT).show();
-                    score.setText("Score: " + mScore);
+                    score.setText("Score: " + mScore+ "/5");
                 }
             }
         });

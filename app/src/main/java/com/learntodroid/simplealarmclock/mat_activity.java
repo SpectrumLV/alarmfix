@@ -28,10 +28,10 @@ public class mat_activity extends AppCompatActivity {
         @Override
         public void onTick(long l) {
             secondsRemaining--;
-            tv_timer.setText(Integer.toString(secondsRemaining) + "sec");
+            tv_timer.setText(Integer.toString(secondsRemaining));
             prog_timer.setProgress(30 - secondsRemaining);
 
-            if (g.getScore() == 40){
+            if (g.getScore() == 8){
                 Intent intent = new Intent(mat_activity.this, ActivitySuccess.class);
                 startActivity(intent);
                 finish();
@@ -83,10 +83,10 @@ public class mat_activity extends AppCompatActivity {
         btn_answer3.setVisibility(View.INVISIBLE);
 
 
-        tv_timer.setText("Osec");
+        tv_timer.setText("O");
         tv_questions.setText("");
         tv_bottommessage.setText("Press Go");
-        tv_score.setText("0pts");
+        tv_score.setText("Score: 0/8");
 
 
 
@@ -109,7 +109,7 @@ public class mat_activity extends AppCompatActivity {
                 int answerSelected = Integer.parseInt(buttonClicked.getText().toString());
 
                 g.checkAnswer(answerSelected);
-                tv_score.setText(Integer.toString(g.getScore()));
+                tv_score.setText("Score: " + Integer.toString(g.getScore())+"/8");
                 nextTurn();
 
 

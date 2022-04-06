@@ -6,7 +6,7 @@
 
     android:layout_height="match_parent"
     tools:context=".activity_quiz"
-    android:background="@drawable/backgroundd">
+    android:background="@drawable/backgrounddquiz">
 
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -28,42 +28,29 @@
 
     <TextView
         android:id="@+id/question"
-        android:layout_width="351dp"
+        android:layout_width="wrap_content"
         android:layout_height="60dp"
+        android:fontFamily="@font/roboto"
         android:text="Question"
         android:textColor="#ffffff"
-        android:textSize="20sp"
 
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.535" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Time left:"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
-
     <Button
         android:id="@+id/answer1"
         android:layout_width="244dp"
         android:layout_height="62dp"
         android:background="@drawable/rect_rounded_button"
+        android:fontFamily="@font/roboto"
         android:text="Button"
-        android:textColor="#000000"
-        android:fontFamily="@font/robotto"
-        android:textStyle="bold"
         android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
@@ -76,11 +63,11 @@
         android:layout_width="244dp"
         android:layout_height="62dp"
         android:background="@drawable/rect_rounded_button"
+        android:fontFamily="@font/roboto"
         android:text="Button"
-        android:textColor="#000000"
-        android:fontFamily="@font/robotto"
-        android:textStyle="bold"
         android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
@@ -94,11 +81,11 @@
         android:layout_width="244dp"
         android:layout_height="62dp"
         android:background="@drawable/rect_rounded_button"
+        android:fontFamily="@font/roboto"
         android:text="Button"
-        android:textColor="#000000"
-        android:fontFamily="@font/robotto"
-        android:textStyle="bold"
         android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
@@ -111,11 +98,11 @@
         android:layout_width="244dp"
         android:layout_height="62dp"
         android:background="@drawable/rect_rounded_button"
+        android:fontFamily="@font/roboto"
         android:text="Button"
-        android:textColor="#000000"
-        android:fontFamily="@font/robotto"
-        android:textStyle="bold"
         android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
@@ -127,6 +114,7 @@
         android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
         android:text="Score"
         android:textColor="#ffffff"
         android:textSize="20sp"
@@ -158,13 +146,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:fontFamily="@font/roboto"
         android:text="Taimeris"
         android:textColor="#ffffff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.67"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
+        app:layout_constraintVertical_bias="0.599" />
 </androidx.constraintlayout.widget.ConstraintLayout>
