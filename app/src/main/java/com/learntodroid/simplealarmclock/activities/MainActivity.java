@@ -10,6 +10,8 @@ import com.learntodroid.simplealarmclock.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
     TextView time, time2;
@@ -22,14 +24,24 @@ public class MainActivity extends AppCompatActivity {
         time = findViewById(R.id.time);
         time2 = findViewById(R.id.time2);
 
-        Calendar currentTime = Calendar.getInstance();
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
-        String dateTime = simpleDateFormat.format(currentTime.getTime());
-        String[] splitted = dateTime.split(":");
+        Timer timer = new Timer();
 
-        time.setText(splitted[0]);
-        time2.setText(splitted[1]);
+
+
+        timer.schedule( new TimerTask() {
+            public void run() {
+                Calendar currentTime = Calendar.getInstance();
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
+                String dateTime = simpleDateFormat.format(currentTime.getTime());
+                String[] splitted = dateTime.split(":");
+                time.setText(splitted[0]);
+                time2.setText(splitted[1]);
+            }
+        }, 0, 60*1000);
+
+//
+
     }
 
 }

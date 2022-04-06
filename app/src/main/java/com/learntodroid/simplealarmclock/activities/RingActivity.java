@@ -3,6 +3,7 @@ package com.learntodroid.simplealarmclock.activities;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.learntodroid.simplealarmclock.R;
@@ -26,6 +28,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -45,14 +49,20 @@ public class RingActivity extends AppCompatActivity {
         time = findViewById(R.id.time);
         time2 = findViewById(R.id.time2);
 
-        Calendar currentTime = Calendar.getInstance();
+        Timer timer = new Timer();
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
-   String dateTime = simpleDateFormat.format(currentTime.getTime());
-      String[] splitted = dateTime.split(":");
 
-        time.setText(splitted[0]);
-        time2.setText(splitted[1]);
+
+        timer.schedule( new TimerTask() {
+            public void run() {
+                Calendar currentTime = Calendar.getInstance();
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
+                String dateTime = simpleDateFormat.format(currentTime.getTime());
+                String[] splitted = dateTime.split(":");
+                time.setText(splitted[0]);
+                time2.setText(splitted[1]);
+            }
+        }, 0, 60*1000);
 
 
 
@@ -96,6 +106,7 @@ public class RingActivity extends AppCompatActivity {
         });
 
         snooze.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View v) {
                 Calendar calendar = Calendar.getInstance();
