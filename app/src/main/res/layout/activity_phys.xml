@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:max="30"
         android:progress="20"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/AppTheme.BlueProgr"/>
 
 
     <com.google.android.material.imageview.ShapeableImageView

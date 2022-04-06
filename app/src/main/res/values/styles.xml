@@ -31,6 +31,10 @@
         </item>
     </style>
 
+    <style name="AppTheme.BlueProgr">
+        <item name="colorAccent">#9bafc7</item> <!-- Whatever color you want-->
+    </style>
+
 
     TimePickerDialog timePicker = new TimePickerDialog(mContext, R.style.TimePickerTheme, fromListener, hour, min, false);
 
