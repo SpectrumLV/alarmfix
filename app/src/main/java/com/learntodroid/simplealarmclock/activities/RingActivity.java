@@ -62,7 +62,7 @@ public class RingActivity extends AppCompatActivity {
                 time.setText(splitted[0]);
                 time2.setText(splitted[1]);
             }
-        }, 0, 60*1000);
+        }, 0, 6);
 
 
 
